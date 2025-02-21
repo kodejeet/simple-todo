@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background styling */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #d278d5, #7d3bd8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* White content box */
+.box {
+    min-height: 200px;
+    width: 350px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title & icon */
+.box h2 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ri-sticky-note-line {
+    font-size: 24px;
+    color: rgb(21, 21, 21);
+    margin-left: 8px;
+}
+
+/* Input & button container */
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Ensures rounded button fits properly */
+}
+
+/* Input field */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* Add button - fully rounded */
+button {
+    background: #a33ad4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    height: 100%;
+    border-radius: 30px;
+    /* Fully rounded */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #a10db8;
+}
+
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
