@@ -98,6 +98,10 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    padding-right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 ul li::before{
     content: '';
@@ -121,7 +125,7 @@ ul li.checked::before{
 }
 
 ul li span {
-    position: absolute;
+    position: static;
     right: 5px; /* Adjust right position slightly */
     top: 5px;
     width: 40px;
