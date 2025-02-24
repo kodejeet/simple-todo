@@ -91,7 +91,7 @@ button:hover {
     background: #a10db8;
 }
 
-ul li{
+ul li {
     list-style: none;
     padding: 12px 8px 12px 50px;
     font-size: 17px;
@@ -103,7 +103,8 @@ ul li{
     align-items: center;
     justify-content: space-between;
 }
-ul li::before{
+
+ul li::before {
     content: '';
     position: absolute;
     height: 28px;
@@ -112,30 +113,32 @@ ul li::before{
     background-image: url(img.png);
     background-size: cover;
     background-position: center;
-    top:12px;
-    left:8px;
+    top: 12px;
+    left: 8px;
 }
-ul li.checked{
+
+ul li.checked {
     color: #555;
     text-decoration: line-through;
-    
 }
-ul li.checked::before{
+
+ul li.checked::before {
     background-image: url(checked.png);
 }
 
 ul li span {
-    position: static;
-    right: 5px; /* Adjust right position slightly */
-    top: 5px;
+    position: static; /* Important: Remove absolute positioning */
     width: 40px;
     height: 40px;
     font-size: 22px;
     color: #555;
     line-height: 40px;
     text-align: center;
+    /* border-radius: 50%; */
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-ul li span:hover{
+ul li span:hover {
     background: #edeef0;
 }
